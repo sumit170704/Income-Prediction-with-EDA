@@ -111,7 +111,12 @@ The model was evaluated using standard classification metrics to measure predict
 
 ⸻
 
-📚 Python Libraries Used
+🛠️ Technologies Used
+
+Programming Language
+* Python
+  
+Libraries
 
 * Pandas
 * NumPy
@@ -119,6 +124,7 @@ The model was evaluated using standard classification metrics to measure predict
 * Seaborn
 * Scikit-learn
 * Joblib
+* Streamlit
 
 ⸻
 
