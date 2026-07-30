@@ -1,166 +1,259 @@
-💰 Income Prediction using Machine Learning
+# 💰 Income Prediction using Machine Learning
 
-📌 Project Overview
+An end-to-end Machine Learning project that predicts whether an individual's annual income exceeds **$50K** based on demographic, educational, and occupational attributes. The project includes data analysis, preprocessing, model training, evaluation, and an interactive **Streamlit web application** for real-time income prediction.
 
-This project focuses on predicting whether an individual’s annual income exceeds $50K based on demographic, educational, and work-related attributes. The objective is to analyze the factors that influence income levels and build a machine learning model capable of making accurate predictions.
+---
 
-The project covers the complete machine learning workflow, including data exploration, preprocessing, feature engineering, model building, and evaluation.
+# 📌 Project Overview
 
-⸻
+This project aims to predict whether an individual's annual income is greater than **$50K** using demographic and work-related information. It demonstrates the complete Machine Learning workflow, including Exploratory Data Analysis (EDA), data preprocessing, feature engineering, model training, evaluation, and deployment through a Streamlit web application.
 
-🎯 Problem Statement
+The Streamlit application allows users to enter their own information and instantly receive income predictions using the trained Machine Learning model.
 
-Identify the socioeconomic and occupational factors that influence an individual’s likelihood of earning more than $50K per year. The insights from this analysis can help support data-driven business strategies, policymaking, and targeted interventions.
+---
 
-⸻
+# 🎯 Problem Statement
 
-📊 Business Requirements
+Develop a Machine Learning model that accurately predicts whether an individual's annual income exceeds **$50K**. The project also identifies the key socioeconomic and occupational factors influencing income to support better business decisions and data-driven insights.
 
-* Analyze income distribution across different demographic groups such as gender, race, and education.
-* Identify occupations with a higher probability of earning more than $50K annually.
-* Study the relationship between working hours per week and annual income.
-* Evaluate the impact of capital gains and capital losses on income classification.
+---
 
-⸻
+# 📊 Business Requirements
 
-📂 Dataset
+- Analyze income distribution across different demographic groups such as gender, race, and education.
+- Identify occupations with a higher probability of earning more than **$50K** annually.
+- Study the relationship between weekly working hours and annual income.
+- Analyze the impact of capital gains and capital losses on income prediction.
 
-The dataset contains demographic, educational, occupational, and financial information about individuals. It includes features such as:
+---
 
-* Age
-* Workclass
-* Education
-* Marital Status
-* Occupation
-* Relationship
-* Race
-* Gender
-* Capital Gain
-* Capital Loss
-* Hours per Week
-* Native Country
-* Income (Target Variable)
+# 📂 Dataset Information
 
-Target Variable:
+The project uses the **Adult Census Income Dataset**, which contains demographic and employment-related information.
 
-* <=50K
-* >50K
+### Features
 
-⸻
+- Age
+- Workclass
+- Education
+- Marital Status
+- Occupation
+- Relationship
+- Race
+- Gender
+- Capital Gain
+- Capital Loss
+- Hours per Week
+- Native Country
 
-🔍 Exploratory Data Analysis (EDA)
+### Target Variable
 
-During the exploratory data analysis phase, the dataset was examined to understand its structure, identify missing values, and explore relationships between different variables.
+- <=50K
+- >50K
 
-The following analyses were performed:
+---
 
-* Dataset overview and statistical summary
-* Missing value identification
-* Distribution analysis of numerical features
-* Categorical feature analysis
-* Income distribution visualization
-* Outlier detection using Box Plots
-* Count plots for demographic comparison
-* Correlation analysis between numerical variables
+# 🔍 Exploratory Data Analysis (EDA)
 
-⸻
+Several exploratory analyses were performed to better understand the dataset.
 
-⚙️ Data Preprocessing
+### EDA Includes
 
-Several preprocessing techniques were applied to prepare the data for machine learning.
+- Dataset Overview
+- Statistical Summary
+- Missing Value Analysis
+- Duplicate Record Detection
+- Outlier Detection
+- Income Distribution
+- Gender-wise Income Analysis
+- Education-wise Income Analysis
+- Occupation Analysis
+- Correlation Analysis
+- Feature Visualization using Charts
 
+---
+
+# ⚙️ Data Preprocessing
+
+The following preprocessing techniques were applied before training the Machine Learning model.
+
+- Handling Missing Values
+- Removing Duplicate Records
+- Feature Selection
+- One-Hot Encoding
+- Label Encoding
+- Feature Scaling
+- Train-Test Split
+
+---
+
+# 🤖 Machine Learning Model
+
+A supervised Machine Learning classification model was trained to predict whether an individual's annual income is above or below **$50K**.
+
+After training, the model was saved using **Joblib** and integrated into a **Streamlit Web Application**, allowing users to make predictions using new input data without retraining the model.
+
+---
+
+# 🌐 Streamlit Web Application
+
+The project includes a user-friendly Streamlit application that allows users to:
+
+- Enter demographic information
+- Enter work-related information
+- Predict annual income instantly
+- Get real-time prediction results
+
+---
+
+# 📈 Project Workflow
+
+```text
+Dataset
+   │
+   ▼
+Data Collection
+   │
+   ▼
 Data Cleaning
-
-* Handled missing values
-* Removed unnecessary columns (if applicable)
-* Checked for duplicate records
-
+   │
+   ▼
+Exploratory Data Analysis (EDA)
+   │
+   ▼
 Feature Engineering
+   │
+   ▼
+Data Preprocessing
+   │
+   ▼
+Train-Test Split
+   │
+   ▼
+Machine Learning Model
+   │
+   ▼
+Model Evaluation
+   │
+   ▼
+Model Saving (Joblib)
+   │
+   ▼
+Streamlit Web Application
+   │
+   ▼
+Real-Time Income Prediction
+```
 
-* One-Hot Encoding for categorical variables
-* Label Encoding where required
+---
 
-Data Transformation
+# 🛠️ Technologies Used
 
-* Converted categorical features into numerical format
-* Prepared features and target variable
-* Split the dataset into training and testing sets
+### Programming Language
 
-⸻
+- Python
 
-🤖 Machine Learning Model
+### Libraries
 
-The processed dataset was used to train a classification model capable of predicting whether an individual’s annual income is above or below $50K.
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Joblib
+- Streamlit
 
-The model was evaluated using standard classification metrics to measure prediction performance.
+---
 
-⸻
+# 📁 Project Structure
 
-📈 Project Workflow
+```text
+Income_Prediction_with_EDA/
+│── Income_Prediction_with_EDA_3.ipynb
+│── income_prediction_form_ui.py
+│── income_prediction_info.py
+│── requirements.txt
+│── README.md
+│── Project-report-Documentation.pdf
+│── Dataset Information & Visualization.pdf
+│── Data Visualization.pdf
+```
 
-1. Load Dataset
-2. Data Exploration
-3. Data Cleaning
-4. Exploratory Data Analysis (EDA)
-5. Feature Engineering
-6. Data Preprocessing
-7. Train-Test Split
-8. Model Training
-9. Model Evaluation
-10. Income Prediction
+---
 
-⸻
+# 🚀 Installation
 
-🛠️ Technologies Used
+```bash
+git clone https://github.com/sumit170704/Income_Prediction_with_EDA.git
 
-Programming Language
-* Python
-  
-Libraries
+cd Income_Prediction_with_EDA
 
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Joblib
-* Streamlit
+pip install -r requirements.txt
+```
 
-⸻
+---
 
-📊 Key Insights
+# ▶️ Run the Project
 
-* Education plays a significant role in determining income levels.
-* Certain occupations have a much higher probability of earning above $50K.
-* Individuals working more hours per week generally have a greater chance of higher income.
-* Capital gains show a positive relationship with higher income categories.
-* Income distribution varies across demographic groups such as gender and race.
+### Run Jupyter Notebook
 
-⸻
+```bash
+jupyter notebook
+```
 
-✅ Conclusion
+### Run Streamlit Application
 
-This project demonstrates how machine learning can be applied to predict income levels using demographic and occupational information.
+```bash
+streamlit run income_prediction_form_ui.py
+```
 
-The analysis revealed that education, occupation, working hours, and capital gains are among the most influential factors affecting income prediction. Although the model achieved promising results, there is still room for improvement by experimenting with advanced algorithms, feature engineering techniques, and hyperparameter tuning.
+---
 
-Overall, this project provides valuable insights into income prediction while showcasing an end-to-end machine learning workflow, from data preprocessing to model evaluation.
+# 📊 Key Insights
 
-⸻
+- Education significantly influences annual income.
+- Occupation is one of the strongest indicators of higher earnings.
+- Individuals working more hours per week generally have a greater chance of earning above **$50K**.
+- Capital gains positively influence income prediction.
+- Demographic factors such as education, occupation, gender, and working hours contribute significantly to income classification.
 
-🚀 Future Improvements
+---
 
-* Hyperparameter tuning
-* Feature selection techniques
-* Advanced ensemble models
-* Cross-validation
-* Model deployment using Flask/FastAPI
-* Interactive dashboard using Streamlit
+# 📈 Results
 
-⸻
+- Successfully built an end-to-end Machine Learning pipeline.
+- Performed comprehensive Exploratory Data Analysis (EDA).
+- Built an accurate income classification model.
+- Developed an interactive Streamlit web application for real-time predictions.
+- Created a reusable prediction system using Joblib.
 
-👨‍💻 Author
+---
 
-Sumit Darji
+# 🚀 Future Improvements
 
-Machine Learning | Data Science | Python Developer
+- Hyperparameter Tuning
+- Feature Selection Techniques
+- Advanced Ensemble Models
+- Deep Learning Approaches
+- Cloud Deployment
+- REST API using Flask/FastAPI
+- Docker Integration
+- CI/CD Pipeline
+- User Authentication
+- Database Integration
+
+---
+
+# 👨‍💻 Author
+
+## Sumit Darji
+
+**Machine Learning | Data Science | Python Developer**
+
+📧 Email: sumitdarji1707@gmail.com
+
+🔗 GitHub: https://github.com/sumit170704
+
+---
+
+⭐ If you found this project useful, don't forget to **Star** this repository.
