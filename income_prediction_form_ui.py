@@ -4,7 +4,17 @@ import numpy as np
 
 # Load models and scaler
 
-model = pickle.load(open(f'rendam_model.pkl','rb'))
+#model = pickle.load(open(f'rendam_model.pkl','rb'))
+from huggingface_hub import hf_hub_download
+import pickle
+
+model_path = hf_hub_download(
+    repo_id="sumit1707/income-prediction-model",
+    filename="rendam_model.pkl"
+)
+
+with open(model_path, "rb") as f:
+    model = pickle.load(f)
 scaler = pickle.load(open(f'randam_scaler.pkl','rb'))
 
 # Category lists
