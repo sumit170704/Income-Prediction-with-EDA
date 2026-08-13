@@ -13,9 +13,19 @@ model_path = hf_hub_download(
     filename="rendam_model.pkl"
 )
 
+scaler_path = hf_hub_download(
+    repo_id="sumit1707/income-prediction-model",
+    filename="randam_scaler.pkl"
+)
+
+
 with open(model_path, "rb") as f:
     model = pickle.load(f)
-scaler = pickle.load(open(f'randam_scaler.pkl','rb'))
+
+
+with open(scaler_path, "rb") as f:
+    scaler = pickle.load(f)
+#scaler = pickle.load(open(f'randam_scaler.pkl','rb'))
 
 # Category lists
 education = ['Select'] + ['1st 2nd 3rd or 4th grade', '10th grade', '11th grade', '12th grade no diploma', 
